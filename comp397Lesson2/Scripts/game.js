@@ -1,22 +1,18 @@
 ﻿/// <reference path="lib/easeljs.d.ts" />
-
-var stage: createjs.Stage;
+var stage;
 var canvas;
-var helloText : createjs.Text;
+var helloText;
 function init() {
-
     canvas = document.getElementById("canvas");
     stage = new createjs.Stage(canvas);
     createjs.Ticker.setFPS(60);
     createjs.Ticker.addEventListener("tick", gameLoop);
     main();
-
-
 }
 
 function gameLoop() {
     helloText.y += 1;
-    helloText.rotation +=1;
+    helloText.rotation += 1;
     stage.update();
 }
 
@@ -25,3 +21,4 @@ function main() {
     stage.addChild(helloText);
     helloText.x = 100;
 }
+//# sourceMappingURL=game.js.map
